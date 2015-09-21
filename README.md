@@ -5,7 +5,7 @@ React Redux Starter Kit
 
 **This is the client-only version of the starter kit**.
 
-Get you up and running with a bunch of awesome new technologies with this starter kit. It provides a configurable, feature-rich Webpack build system that's already setup to provide unit testing, linting, hot reloading, sass imports with CSS extraction, and a whole lot more. Check out the full feature list below!
+Get up and running with a bunch of awesome new technologies with this starter kit. It provides a configurable, feature-rich Webpack build system that's already setup to provide unit testing, linting, hot reloading, sass imports with CSS extraction, and a whole lot more. Check out the full feature list below!
 
 Redux, React-Router, and React are constantly releasing new API changes. If you'd like to help keep this boilerplate up to date, please contribute or create a new issue if you think this starter kit is missing something!
 
@@ -75,7 +75,7 @@ Runs all tests for the application. When run in a production build, failing test
 Similar to `npm run test`, but only runs unit tests. In development mode this will run in watch mode and re-run individual test files when they change.
 
 #### `npm run deploy`
-Helper script to run tests and then, on success, compile your application. Server tests that rely on the compiled server bundle will be run after compilation finishes.
+Helper script to run tests and then, on success, compile your application.
 
 ### Configuration
 
@@ -83,9 +83,6 @@ Basic project configuration can be found in `~/config/index.js`. Here you'll be 
 
 Webpack
 -------
-
-### Configuration
-There are two configuration files for the webpack compiler, client and server, located in `~/build/webpack` and named accordingly. When the webpack dev server runs, only the client compiler will be used. When webpack itself is run to compile to disk, both the client and server configurations will be used. Settings that are bundle agnostic should be defined in `~/config/index.js` and imported where needed.
 
 ### Vendor Bundle
 You can redefine which packages to treat as vendor dependencies by editing `vendor_dependencies` in `~/config/index.js`. These default to:
@@ -141,7 +138,7 @@ True when the compiler is run with `--debug` (any environment).
 Styles
 ------
 
-All `.scss` imports will be run through the sass-loader, extracted during production builds, and ignored during server builds. If you're requiring styles from a base styles directory (useful for generic, app-wide styles) in your JS, you can make use of the `styles` alias, e.g.:
+All `.scss` imports will be run through the sass-loader and extracted during production builds. If you're requiring styles from a base styles directory (useful for generic, app-wide styles) in your JS, you can make use of the `styles` alias, e.g.:
 
 ```js
 // ~/src/components/some/nested/component/index.jsx
