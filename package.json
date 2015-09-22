@@ -12,6 +12,7 @@
     "dev:no-debug": "npm run dev -- --no_debug",
     "test": "npm run test:unit && npm run test:server",
     "test:unit": "node ./node_modules/karma/bin/karma start",
+    "test:unit:single-run": "node ./node_modules/karma/bin/karma start --single-run",
     "test:server": "mocha --harmony bin/test-server",
     "deploy": "npm run test:unit && npm run compile && npm run test:server",
     "server:start": "node --harmony bin/server",
